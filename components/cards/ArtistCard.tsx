@@ -28,7 +28,7 @@ export default function ArtistCard({
         <div className="relative">
           <SpeedLines color="var(--violet)" className="scale-[1.7]" />
           <BlobFrame
-            borderColor="var(--ink)"
+            borderColor="var(--pink)"
             borderWidth={3}
             className="relative z-10 aspect-square shadow-sticker"
           >
@@ -46,7 +46,7 @@ export default function ArtistCard({
         </div>
 
         <div className="relative z-30 -mt-6 flex items-end justify-between gap-2 px-1">
-          <h3 className="font-sub text-2xl leading-none text-ink drop-shadow-[2px_2px_0_var(--paper)]">
+          <h3 className="font-sub text-2xl leading-none text-ghost drop-shadow-[2px_2px_0_var(--pink)]">
             {artist.name}
           </h3>
           <Badge rotate={rotate} className="shrink-0 text-xs">

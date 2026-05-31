@@ -111,13 +111,13 @@ export default function LicensingPageContent() {
       <MarqueeBar items={MARQUEE} variant="volt" direction="right" />
 
       {/* Use cases — dark immersive grid */}
-      <section className="bg-smoke px-6 py-24 text-paper md:px-12 md:py-32">
+      <section className="bg-smoke px-6 py-24 text-ink md:px-12 md:py-32">
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <h2 className="font-display text-5xl tracking-wide text-volt md:text-6xl">
               Where Our Music Lives
             </h2>
-            <p className="mt-4 max-w-xl font-mono text-sm text-paper/60">
+            <p className="mt-4 max-w-xl font-mono text-sm text-ink/60">
               From indie films to global campaigns — our catalog is built for
               stories that need soul.
             </p>
@@ -129,8 +129,8 @@ export default function LicensingPageContent() {
                 <article className="group sticker relative overflow-hidden rounded-2xl bg-smoke p-8 transition-shadow duration-200 hover:shadow-sticker-pink">
                   <SpeedLines color="var(--violet)" className="scale-150 opacity-0 group-hover:opacity-100" />
                   <span className="relative z-10 text-4xl" aria-hidden>{uc.icon}</span>
-                  <h3 className="relative z-10 mt-4 font-sub text-2xl text-paper">{uc.title}</h3>
-                  <p className="relative z-10 mt-3 font-mono text-sm leading-relaxed text-paper/70">
+                  <h3 className="relative z-10 mt-4 font-sub text-2xl text-ink">{uc.title}</h3>
+                  <p className="relative z-10 mt-3 font-mono text-sm leading-relaxed text-ink/70">
                     {uc.body}
                   </p>
                 </article>
@@ -209,7 +209,7 @@ export default function LicensingPageContent() {
       <DrippyDivider color="var(--smoke)" />
 
       {/* Inquiry form */}
-      <section id="inquire" className="bg-smoke px-6 py-24 text-paper md:px-12 md:py-32">
+      <section id="inquire" className="bg-smoke px-6 py-24 text-ink md:px-12 md:py-32">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-start">
           <Reveal>
             <Badge rotate={5} color="var(--volt)" textColor="var(--ink)" className="mb-6">
@@ -218,7 +218,7 @@ export default function LicensingPageContent() {
             <h2 className="font-display text-5xl tracking-wide text-pink md:text-6xl">
               Licensing Inquiry
             </h2>
-            <p className="mt-6 font-mono text-sm leading-relaxed text-paper/75">
+            <p className="mt-6 font-mono text-sm leading-relaxed text-ink/75">
               Tell us about your project and we&apos;ll get back to you with
               options, pricing, and timeline. For urgent requests, email{" "}
               <a
@@ -228,7 +228,7 @@ export default function LicensingPageContent() {
                 licensing@lonelyrecords.com
               </a>
             </p>
-            <ul className="mt-8 space-y-3 font-mono text-xs uppercase tracking-[0.15em] text-paper/50">
+            <ul className="mt-8 space-y-3 font-mono text-xs uppercase tracking-[0.15em] text-ink/50">
               <li>★ One-stop master &amp; publishing</li>
               <li>★ Stems available on request</li>
               <li>★ Worldwide territory</li>

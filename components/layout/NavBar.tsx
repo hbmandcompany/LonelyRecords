@@ -38,7 +38,6 @@ export default function NavBar() {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const goingDown = latest > prev.current;
-    // Hide when scrolling down past the hero edge; reveal on any upward scroll.
     setHidden(goingDown && latest > 140 && !open);
     prev.current = latest;
   });
@@ -50,10 +49,10 @@ export default function NavBar() {
       transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
       className="fixed inset-x-0 top-4 z-[9000] flex justify-center px-4"
     >
-      <nav className="sticker flex w-full max-w-5xl items-center justify-between gap-4 rounded-full bg-paper/80 px-4 py-2.5 backdrop-blur-md md:px-6">
+      <nav className="sticker flex w-full max-w-5xl items-center justify-between gap-4 rounded-full border-pink/40 bg-void/85 px-4 py-2.5 backdrop-blur-md md:px-6">
         <Link
           href="/"
-          className="font-display text-xl leading-none tracking-wide md:text-2xl"
+          className="font-display text-xl leading-none tracking-[0.12em] text-ghost md:text-2xl"
         >
           LONELY RECORDS
         </Link>
@@ -63,7 +62,7 @@ export default function NavBar() {
             <Link
               key={l.href}
               href={l.href}
-              className="font-mono text-xs uppercase tracking-[0.18em] transition-colors hover:text-pink"
+              className="font-mono text-xs uppercase tracking-[0.18em] text-ink/70 transition-colors hover:text-pink"
             >
               {l.label}
             </Link>
@@ -76,7 +75,7 @@ export default function NavBar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className="transition-colors hover:text-pink"
+            className="text-ink/70 transition-colors hover:text-pink"
           >
             <InstagramIcon />
           </a>
@@ -112,14 +111,14 @@ export default function NavBar() {
         <motion.div
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
-          className="sticker absolute left-4 right-4 top-[72px] flex flex-col gap-1 rounded-2xl bg-paper p-3 md:hidden"
+          className="sticker absolute left-4 right-4 top-[72px] flex flex-col gap-1 rounded-2xl border-pink/50 bg-void p-3 md:hidden"
         >
           {LINKS.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="rounded-xl px-4 py-3 font-mono text-sm uppercase tracking-wide hover:bg-ink hover:text-paper"
+              className="rounded-xl px-4 py-3 font-mono text-sm uppercase tracking-wide text-ink hover:bg-pink hover:text-ghost"
             >
               {l.label}
             </Link>
@@ -127,7 +126,7 @@ export default function NavBar() {
           <Link
             href="/shop"
             onClick={() => setOpen(false)}
-            className="rounded-xl bg-pink px-4 py-3 text-center font-mono text-sm uppercase tracking-wide text-ghost"
+            className="rounded-full bg-pink px-4 py-3 text-center font-mono text-sm uppercase tracking-wide text-ghost"
           >
             Shop
           </Link>

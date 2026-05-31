@@ -48,6 +48,9 @@ export default function CustomCursor() {
         width: size,
         height: size,
         backgroundColor: active ? "var(--volt)" : "var(--pink)",
+        boxShadow: active
+          ? "0 0 20px rgba(201, 162, 39, 0.6)"
+          : "0 0 12px rgba(225, 6, 0, 0.5)",
         transform: `translate(${pos.x - size / 2}px, ${pos.y - size / 2}px) scale(${scale})`,
         transition:
           "width 0.18s ease, height 0.18s ease, background-color 0.18s ease, transform 0.1s ease-out",

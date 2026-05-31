@@ -6,8 +6,8 @@ type MarqueeBarProps = {
 };
 
 const VARIANTS = {
-  pink: "bg-pink text-ink border-y-[3px] border-ink",
-  volt: "bg-volt text-ink border-y-[3px] border-ink",
+  pink: "bg-pink text-ghost border-y border-pink/80",
+  volt: "bg-void text-volt border-y border-volt/40",
 };
 
 export default function MarqueeBar({
@@ -19,7 +19,6 @@ export default function MarqueeBar({
   const anim =
     direction === "left" ? "animate-marquee-left" : "animate-marquee-right";
 
-  // Two identical copies inside one track; animating by -50% loops seamlessly.
   const copy = [...items, ...items];
 
   return (
@@ -31,10 +30,10 @@ export default function MarqueeBar({
       >
         {copy.map((item, i) => (
           <span key={i} className="flex items-center gap-6">
-            <span className="font-mono text-sm font-medium uppercase tracking-[0.25em] whitespace-nowrap">
+            <span className="font-mono text-sm font-medium uppercase tracking-[0.3em] whitespace-nowrap">
               {item}
             </span>
-            <span className="text-lg leading-none">&#9733;</span>
+            <span className="text-lg leading-none text-pink/80">&#9670;</span>
           </span>
         ))}
       </div>

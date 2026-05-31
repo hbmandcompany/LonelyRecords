@@ -2,7 +2,6 @@ import { ReactNode } from "react";
 
 type BadgeProps = {
   children: ReactNode;
-  /** Rotation in degrees, typically between -6 and +6. */
   rotate?: number;
   variant?: "pill" | "star";
   color?: string;
@@ -10,16 +9,12 @@ type BadgeProps = {
   className?: string;
 };
 
-/**
- * Sticker badge: thick ink-outlined, rotated, Permanent Marker text inside.
- * Used for NEW RELEASE, AVAILABLE NOW, EST. 2025, etc.
- */
 export default function Badge({
   children,
-  rotate = -4,
+  rotate = -2,
   variant = "pill",
-  color = "var(--ghost)",
-  textColor = "var(--ink)",
+  color = "var(--void)",
+  textColor = "var(--pink)",
   className = "",
 }: BadgeProps) {
   const shape =
@@ -29,7 +24,7 @@ export default function Badge({
 
   return (
     <span
-      className={`sticker inline-flex select-none items-center justify-center px-4 py-1.5 text-center font-marker text-sm leading-tight ${shape} ${className}`}
+      className={`sticker inline-flex select-none items-center justify-center px-4 py-1.5 text-center font-mono text-xs font-medium uppercase tracking-[0.15em] ${shape} ${className}`}
       style={{
         transform: `rotate(${rotate}deg)`,
         backgroundColor: color,

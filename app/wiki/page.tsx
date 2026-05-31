@@ -121,7 +121,7 @@ export default function WikiPage() {
 
       <DrippyDivider color="var(--smoke)" />
 
-      <section className="bg-smoke px-6 py-24 text-paper md:px-12 md:py-32">
+      <section className="bg-smoke px-6 py-24 text-ink md:px-12 md:py-32">
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <h2 className="font-display text-5xl tracking-wide text-volt md:text-6xl">
@@ -132,8 +132,8 @@ export default function WikiPage() {
             {MISSION.map((m, i) => (
               <Reveal key={m.title} index={i}>
                 <div className="text-pink">{m.icon}</div>
-                <h3 className="mt-5 font-sub text-2xl text-paper">{m.title}</h3>
-                <p className="mt-3 font-mono text-sm leading-relaxed text-paper/75">
+                <h3 className="mt-5 font-sub text-2xl text-ink">{m.title}</h3>
+                <p className="mt-3 font-mono text-sm leading-relaxed text-ink/75">
                   {m.body}
                 </p>
               </Reveal>

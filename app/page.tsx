@@ -1,24 +1,23 @@
 import Hero from "@/components/sections/Hero";
-import FeaturedArtists from "@/components/sections/FeaturedArtists";
-import FeaturedAlbum from "@/components/sections/FeaturedAlbum";
+import ComingSoon from "@/components/sections/ComingSoon";
 import AboutTeaser from "@/components/sections/AboutTeaser";
 import MarqueeBar from "@/components/layout/MarqueeBar";
 import DrippyDivider from "@/components/decorative/DrippyDivider";
 
 const PINK_MARQUEE = [
   "LONELY RECORDS",
-  "INDIE POP",
+  "INDEPENDENT ART",
   "EST. 2025",
-  "NEW MUSIC",
-  "REAL ARTISTS",
+  "NEW RELEASES",
+  "CURATED ROSTER",
 ];
 
 const VOLT_MARQUEE = [
-  "LISTEN ON SPOTIFY",
+  "SPOTIFY",
   "APPLE MUSIC",
-  "TIDAL",
   "SOUNDCLOUD",
   "BANDCAMP",
+  "STREAM EVERYWHERE",
 ];
 
 export default function HomePage() {
@@ -29,10 +28,7 @@ export default function HomePage() {
       <DrippyDivider color="var(--pink)" />
       <MarqueeBar items={PINK_MARQUEE} variant="pink" direction="left" />
 
-      <FeaturedArtists />
-
-      <DrippyDivider color="var(--smoke)" />
-      <FeaturedAlbum />
+      <ComingSoon />
 
       <DrippyDivider color="var(--smoke)" />
       <MarqueeBar items={VOLT_MARQUEE} variant="volt" direction="right" />

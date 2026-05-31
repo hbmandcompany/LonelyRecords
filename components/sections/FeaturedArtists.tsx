@@ -12,7 +12,7 @@ export default function FeaturedArtists() {
     <section className="bg-paper px-6 py-20 md:px-12 md:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 flex items-end justify-between gap-4">
-          <h2 className="font-display text-5xl tracking-wide text-ink md:text-7xl">
+          <h2 className="rage-glow font-display text-5xl tracking-[0.08em] text-ghost md:text-7xl">
             Our Artists
           </h2>
           <Link

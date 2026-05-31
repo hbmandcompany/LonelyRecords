@@ -34,7 +34,7 @@ export default function NewsPageContent() {
   return (
     <>
       {/* Immersive hero — featured story */}
-      <section className="relative flex min-h-[85vh] flex-col justify-end overflow-hidden bg-smoke px-6 pb-16 pt-36 text-paper md:px-12 md:pb-24 md:pt-44">
+      <section className="relative flex min-h-[85vh] flex-col justify-end overflow-hidden bg-smoke px-6 pb-16 pt-36 text-ink md:px-12 md:pb-24 md:pt-44">
         <div
           aria-hidden
           className="absolute inset-0 bg-cover bg-center opacity-30"
@@ -59,10 +59,10 @@ export default function NewsPageContent() {
           <Badge rotate={-6} color="var(--pink)" textColor="var(--ghost)" className="mb-6">
             {featured.category}
           </Badge>
-          <h1 className="max-w-4xl font-display text-5xl leading-[0.88] tracking-wide text-paper md:text-8xl">
+          <h1 className="max-w-4xl font-display text-5xl leading-[0.88] tracking-wide text-ink md:text-8xl">
             {featured.title}
           </h1>
-          <p className="mt-6 max-w-2xl font-mono text-sm leading-relaxed text-paper/75 md:text-base">
+          <p className="mt-6 max-w-2xl font-mono text-sm leading-relaxed text-ink/75 md:text-base">
             {featured.excerpt}
           </p>
           <p className="mt-4 font-mono text-xs uppercase tracking-[0.2em] text-pink">
@@ -148,7 +148,7 @@ export default function NewsPageContent() {
       <DrippyDivider color="var(--smoke)" />
 
       {/* Newsletter CTA — dark inverted */}
-      <section className="bg-smoke px-6 py-24 text-paper md:px-12 md:py-32">
+      <section className="bg-smoke px-6 py-24 text-ink md:px-12 md:py-32">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
             <Badge rotate={5} className="mb-6">
@@ -157,7 +157,7 @@ export default function NewsPageContent() {
             <h2 className="font-display text-5xl tracking-wide text-volt md:text-6xl">
               Never Miss A Drop
             </h2>
-            <p className="mt-6 font-mono text-sm leading-relaxed text-paper/70">
+            <p className="mt-6 font-mono text-sm leading-relaxed text-ink/70">
               New releases, tour announcements, and zine drops — straight to
               your inbox. No spam, just music.
             </p>
@@ -168,7 +168,7 @@ export default function NewsPageContent() {
               <input
                 type="email"
                 placeholder="you@email.com"
-                className="rounded-full border-[3px] border-paper/30 bg-smoke px-5 py-3 font-mono text-sm text-paper placeholder:text-paper/40 focus:border-pink focus:outline-none sm:min-w-[280px]"
+                className="rounded-full border-[2px] border-ink/30 bg-void px-5 py-3 font-mono text-sm text-ink placeholder:text-ink/40 focus:border-pink focus:outline-none sm:min-w-[280px]"
               />
               <button
                 type="submit"

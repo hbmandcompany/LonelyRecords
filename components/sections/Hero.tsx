@@ -27,22 +27,29 @@ const curtain: Variants = {
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-paper px-6 pb-24 pt-32 md:px-12">
-      {/* Background blob */}
+    <section className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-void px-6 pb-24 pt-32 md:px-12">
+      <div aria-hidden className="pointer-events-none absolute inset-0 haze-red" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 haze-purple" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 scanlines opacity-40" />
+
       <div
         aria-hidden
-        className="animate-blob pointer-events-none absolute -right-32 top-24 h-[70vh] w-[70vh] bg-volt opacity-15"
+        className="animate-blob pointer-events-none absolute -right-32 top-24 h-[70vh] w-[70vh] bg-violet opacity-20"
         style={{ borderRadius: "42% 58% 63% 37% / 41% 44% 56% 59%" }}
       />
 
-      {/* Floating sticker */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.6, rotate: 20 }}
-        animate={{ opacity: 1, scale: 1, rotate: 8 }}
+        initial={{ opacity: 0, scale: 0.6, rotate: 12 }}
+        animate={{ opacity: 1, scale: 1, rotate: 3 }}
         transition={{ duration: 0.6, ease: EXPO, delay: 0.7 }}
         className="absolute right-6 top-28 z-20 md:right-16 md:top-32"
       >
-        <Badge rotate={8} variant="star" className="max-w-[180px] text-sm">
+        <Badge
+          rotate={3}
+          color="var(--void)"
+          textColor="var(--pink)"
+          className="max-w-[180px] text-xs uppercase tracking-[0.15em]"
+        >
           New Music Every Season
         </Badge>
       </motion.div>
@@ -53,17 +60,17 @@ export default function Hero() {
         animate="show"
         className="relative z-10 mx-auto w-full max-w-6xl"
       >
-        <div className="font-display leading-[0.82] tracking-wide">
+        <div className="font-display leading-[0.82] tracking-[0.08em]">
           <motion.h1
             variants={curtain}
-            className="text-hero text-ink"
+            className="rage-glow text-hero text-ghost"
             style={{ fontSize: "clamp(72px, 12vw, 180px)" }}
           >
             LONELY
           </motion.h1>
           <motion.h1
             variants={curtain}
-            className="ml-[8vw] text-ink"
+            className="rage-glow ml-[8vw] text-pink"
             style={{ fontSize: "clamp(72px, 12vw, 180px)", lineHeight: 0.82 }}
           >
             RECORDS
@@ -72,9 +79,9 @@ export default function Hero() {
 
         <motion.p
           variants={item}
-          className="mt-8 font-mono text-sm tracking-wide text-ink/80 md:text-base"
+          className="mt-8 font-mono text-sm tracking-wide text-ink/60 md:text-base"
         >
-          indie pop. unbeatable records.
+          Not So Bad After All
         </motion.p>
 
         <motion.div

@@ -26,12 +26,12 @@ export default function LicensingForm() {
   }
 
   const field =
-    "w-full rounded-xl border-[3px] border-ink bg-paper px-4 py-3 font-mono text-sm text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-pink";
+    "w-full rounded-sm border-[2px] border-pink/30 bg-smoke px-4 py-3 font-mono text-sm text-ink placeholder:text-ink/35 focus:outline-none focus:ring-2 focus:ring-pink/50";
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="sticker space-y-5 rounded-2xl bg-paper p-6 md:p-8"
+      className="sticker space-y-5 rounded-sm bg-smoke p-6 md:p-8"
     >
       <div>
         <label htmlFor="company" className="mb-2 block font-mono text-xs uppercase tracking-[0.18em]">

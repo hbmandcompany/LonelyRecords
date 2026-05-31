@@ -7,14 +7,14 @@ export default function AboutTeaser() {
     <section className="halftone bg-paper px-6 py-24 md:px-12 md:py-32">
       <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
         <Reveal>
-          <h2 className="font-display text-5xl tracking-wide text-ink md:text-6xl">
-            Who We Are
+          <h2 className="rage-glow font-display text-5xl tracking-[0.08em] text-ghost md:text-6xl">
+            Crafted With Intention
           </h2>
-          <p className="mt-6 max-w-md font-mono text-sm leading-relaxed text-ink/80 md:text-base">
-            We started Lonely Records in a basement with a four-track and a
-            stack of blank cassettes. We sign the songs that keep us up at
-            night — introspective, loud, a little broken, deeply alive. No
-            algorithms. No focus groups. Just real music made by real people.
+          <p className="mt-6 max-w-md font-mono text-sm leading-relaxed text-ink/60 md:text-base">
+            Lonely Records began in a basement studio with a four-track and a
+            clear point of view. We champion music that is raw, reflective, and
+            unmistakably human — records made with care and released without
+            compromise.
           </p>
           <Link
             href="/news"
@@ -25,14 +25,14 @@ export default function AboutTeaser() {
         </Reveal>
 
         <Reveal delay={0.1} className="flex flex-col items-center gap-5">
-          <Badge rotate={-6} className="text-base">
-            Real Music
-          </Badge>
-          <Badge rotate={4} variant="star" className="text-base">
-            Real Artists
-          </Badge>
           <Badge rotate={-3} className="text-base">
-            Indie Pop Forever
+            Artist-Led
+          </Badge>
+          <Badge rotate={2} variant="star" className="text-base">
+            Curated
+          </Badge>
+          <Badge rotate={-2} className="text-base">
+            Hand-Pressed
           </Badge>
         </Reveal>
       </div>
