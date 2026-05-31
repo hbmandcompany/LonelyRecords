@@ -27,7 +27,7 @@ const curtain: Variants = {
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-void px-6 pb-24 pt-32 md:px-12">
+    <section className="relative flex min-h-[100dvh] flex-col justify-center overflow-hidden bg-void px-4 pb-20 pt-28 sm:px-6 sm:pb-24 sm:pt-32 md:px-12">
       <div aria-hidden className="pointer-events-none absolute inset-0 haze-red" />
       <div aria-hidden className="pointer-events-none absolute inset-0 haze-purple" />
       <div aria-hidden className="pointer-events-none absolute inset-0 scanlines opacity-40" />
@@ -42,7 +42,7 @@ export default function Hero() {
         initial={{ opacity: 0, scale: 0.6, rotate: 12 }}
         animate={{ opacity: 1, scale: 1, rotate: 3 }}
         transition={{ duration: 0.6, ease: EXPO, delay: 0.7 }}
-        className="absolute right-6 top-28 z-20 md:right-16 md:top-32"
+        className="absolute right-4 top-24 z-20 sm:right-6 sm:top-28 md:right-16 md:top-32"
       >
         <Badge
           rotate={3}
@@ -60,20 +60,20 @@ export default function Hero() {
         animate="show"
         className="relative z-10 mx-auto w-full max-w-6xl"
       >
-        <div className="font-display leading-[0.82] tracking-[0.08em]">
-          <motion.h1
-            variants={curtain}
-            className="rage-glow text-hero text-ghost"
-            style={{ fontSize: "clamp(72px, 12vw, 180px)" }}
-          >
-            LONELY
-          </motion.h1>
-          <motion.h1
-            variants={curtain}
-            className="rage-glow ml-[8vw] text-pink"
-            style={{ fontSize: "clamp(72px, 12vw, 180px)", lineHeight: 0.82 }}
-          >
-            RECORDS
+        <div className="font-display leading-[0.82] tracking-[0.06em] md:tracking-[0.08em]">
+          <motion.h1 variants={curtain} className="rage-glow text-ghost">
+            <span
+              className="block"
+              style={{ fontSize: "clamp(3rem, 14vw, 11.25rem)", lineHeight: 0.82 }}
+            >
+              LONELY
+            </span>
+            <span
+              className="block text-pink ml-4 sm:ml-[6vw] md:ml-[8vw]"
+              style={{ fontSize: "clamp(3rem, 14vw, 11.25rem)", lineHeight: 0.82 }}
+            >
+              RECORDS
+            </span>
           </motion.h1>
         </div>
 
@@ -86,12 +86,12 @@ export default function Hero() {
 
         <motion.div
           variants={item}
-          className="mt-8 flex flex-wrap items-center gap-4"
+          className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:gap-4"
         >
-          <Button href="/catalog" variant="pink">
+          <Button href="/catalog" variant="pink" className="w-full sm:w-auto">
             Explore Catalog
           </Button>
-          <Button href="/submitdemo" variant="ink">
+          <Button href="/submitdemo" variant="ink" className="w-full sm:w-auto">
             Submit A Demo
           </Button>
         </motion.div>

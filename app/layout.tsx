@@ -5,6 +5,7 @@ import { bebasNeue, blackHanSans, dmMono } from "./fonts";
 import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
 import CustomCursor from "@/components/layout/CustomCursor";
+import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Lonely Records — Independent Label",
@@ -19,6 +20,13 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#050505",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -30,9 +38,16 @@ export default function RootLayout({
       className={`${bebasNeue.variable} ${blackHanSans.variable} ${dmMono.variable}`}
     >
       <body className="font-mono antialiased">
+        <JsonLd />
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[10000] focus:rounded-full focus:bg-pink focus:px-4 focus:py-2 focus:font-mono focus:text-sm focus:text-ghost"
+        >
+          Skip to main content
+        </a>
         <CustomCursor />
         <NavBar />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
         <Analytics />
       </body>

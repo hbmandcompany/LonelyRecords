@@ -30,7 +30,7 @@ export default function MarqueeBar({
       >
         {copy.map((item, i) => (
           <span key={i} className="flex items-center gap-6">
-            <span className="font-mono text-sm font-medium uppercase tracking-[0.3em] whitespace-nowrap">
+            <span className="font-mono text-xs font-medium uppercase tracking-[0.2em] whitespace-nowrap sm:text-sm sm:tracking-[0.25em]">
               {item}
             </span>
             <span className="text-lg leading-none text-pink/80">&#9670;</span>

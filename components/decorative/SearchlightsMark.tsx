@@ -8,8 +8,8 @@ export default function SearchlightsMark({ className = "" }: { className?: strin
     <Link
       href="/"
       aria-label="Lonely Records home"
-      className={`relative block overflow-hidden ${className}`}
-      style={{ width: 280, height: 128 }}
+      className={`relative mx-auto block w-full max-w-[280px] overflow-hidden ${className}`}
+      style={{ aspectRatio: "280 / 128" }}
     >
       {/* Beam A — left tower */}
       <div

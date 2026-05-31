@@ -16,11 +16,11 @@ const SOCIAL = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-pink/30 bg-void text-ink">
+    <footer className="relative overflow-hidden border-t border-pink/30 bg-void pb-[env(safe-area-inset-bottom)] text-ink">
       <GrainOverlay opacity={0.12} />
-      <div className="relative z-10 mx-auto max-w-6xl px-6 py-16">
-        <div className="grid gap-10 md:grid-cols-3">
-          <div className="flex items-start">
+      <div className="relative z-10 mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+        <div className="grid gap-10 text-center md:grid-cols-3 md:text-left">
+          <div className="flex items-start justify-center md:justify-start">
             <SearchlightsMark />
           </div>
 
@@ -28,12 +28,12 @@ export default function Footer() {
             <p className="font-mono text-xs uppercase tracking-[0.25em] text-pink">
               Explore
             </p>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 space-y-1">
               {NAV.map((l) => (
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="font-mono text-sm text-ink/70 transition-colors hover:text-volt"
+                    className="inline-flex min-h-[44px] items-center justify-center font-mono text-sm text-ink/70 transition-colors hover:text-volt md:justify-start"
                   >
                     {l.label}
                   </Link>
@@ -46,14 +46,14 @@ export default function Footer() {
             <p className="font-mono text-xs uppercase tracking-[0.25em] text-pink">
               Listen / Follow
             </p>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 space-y-1">
               {SOCIAL.map((l) => (
                 <li key={l.label}>
                   <a
                     href={l.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-mono text-sm text-ink/70 transition-colors hover:text-volt"
+                    className="inline-flex min-h-[44px] items-center justify-center font-mono text-sm text-ink/70 transition-colors hover:text-volt md:justify-start"
                   >
                     {l.label}
                   </a>

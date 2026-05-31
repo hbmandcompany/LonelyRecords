@@ -27,7 +27,7 @@ export default function Button({
   external = false,
   type = "button",
 }: ButtonProps) {
-  const cls = `sticker sticker-hover inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-mono text-sm font-medium uppercase tracking-[0.15em] ${VARIANTS[variant]} hover:-translate-y-0.5 active:translate-y-0 ${className}`;
+  const cls = `sticker sticker-hover inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full px-6 py-3 font-mono text-sm font-medium uppercase tracking-[0.15em] ${VARIANTS[variant]} hover:-translate-y-0.5 active:translate-y-0 ${className}`;
 
   if (href) {
     if (external || href.startsWith("mailto:")) {

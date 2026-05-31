@@ -47,12 +47,15 @@ export default function NavBar() {
       initial={{ y: 0 }}
       animate={{ y: hidden ? -140 : 0 }}
       transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed inset-x-0 top-4 z-[9000] flex justify-center px-4"
+      className="fixed inset-x-0 top-0 z-[9000] flex justify-center px-4 pt-[max(1rem,env(safe-area-inset-top))] md:top-4 md:pt-0"
     >
-      <nav className="sticker flex w-full max-w-5xl items-center justify-between gap-4 rounded-full border-pink/40 bg-void/85 px-4 py-2.5 backdrop-blur-md md:px-6">
+      <nav
+        aria-label="Primary navigation"
+        className="sticker flex w-full max-w-5xl items-center justify-between gap-2 rounded-full border-pink/40 bg-void/85 px-3 py-2 backdrop-blur-md sm:gap-4 sm:px-4 sm:py-2.5 md:px-6"
+      >
         <Link
           href="/"
-          className="font-display text-xl leading-none tracking-[0.12em] text-ghost md:text-2xl"
+          className="font-display text-lg leading-none tracking-[0.1em] text-ghost sm:text-xl md:text-2xl md:tracking-[0.12em]"
         >
           LONELY RECORDS
         </Link>
@@ -90,7 +93,7 @@ export default function NavBar() {
             aria-label="Toggle menu"
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="flex h-8 w-8 items-center justify-center md:hidden"
+            className="touch-target flex h-11 w-11 items-center justify-center md:hidden"
           >
             <span className="relative block h-4 w-5">
               <span
@@ -118,7 +121,7 @@ export default function NavBar() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="rounded-xl px-4 py-3 font-mono text-sm uppercase tracking-wide text-ink hover:bg-pink hover:text-ghost"
+              className="block min-h-[44px] rounded-xl px-4 py-3 font-mono text-sm uppercase tracking-wide text-ink hover:bg-pink hover:text-ghost"
             >
               {l.label}
             </Link>
@@ -126,7 +129,7 @@ export default function NavBar() {
           <Link
             href="/shop"
             onClick={() => setOpen(false)}
-            className="rounded-full bg-pink px-4 py-3 text-center font-mono text-sm uppercase tracking-wide text-ghost"
+            className="block min-h-[44px] rounded-full bg-pink px-4 py-3 text-center font-mono text-sm uppercase tracking-wide text-ghost"
           >
             Shop
           </Link>
