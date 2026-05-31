@@ -1,6 +1,6 @@
 import Hero from "@/components/sections/Hero";
-import FeaturedReleases from "@/components/sections/FeaturedReleases";
-import FeaturedArtist from "@/components/sections/FeaturedArtist";
+import FeaturedArtists from "@/components/sections/FeaturedArtists";
+import FeaturedAlbum from "@/components/sections/FeaturedAlbum";
 import AboutTeaser from "@/components/sections/AboutTeaser";
 import MarqueeBar from "@/components/layout/MarqueeBar";
 import DrippyDivider from "@/components/decorative/DrippyDivider";
@@ -29,10 +29,10 @@ export default function HomePage() {
       <DrippyDivider color="var(--pink)" />
       <MarqueeBar items={PINK_MARQUEE} variant="pink" direction="left" />
 
-      <FeaturedReleases />
+      <FeaturedArtists />
 
       <DrippyDivider color="var(--smoke)" />
-      <FeaturedArtist />
+      <FeaturedAlbum />
 
       <DrippyDivider color="var(--smoke)" />
       <MarqueeBar items={VOLT_MARQUEE} variant="volt" direction="right" />

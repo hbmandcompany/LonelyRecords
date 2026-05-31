@@ -81,11 +81,11 @@ export default function Hero() {
           variants={item}
           className="mt-8 flex flex-wrap items-center gap-4"
         >
-          <Button href="/artists" variant="pink">
-            Explore Artists
+          <Button href="/catalog" variant="pink">
+            Explore Catalog
           </Button>
-          <Button href="/releases" variant="ink">
-            New Releases
+          <Button href="/submitdemo" variant="ink">
+            Submit A Demo
           </Button>
         </motion.div>
       </motion.div>

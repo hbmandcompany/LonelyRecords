@@ -17,10 +17,10 @@ export default function AboutTeaser() {
             algorithms. No focus groups. Just real music made by real people.
           </p>
           <Link
-            href="/about"
+            href="/news"
             className="mt-6 inline-block font-mono text-sm uppercase tracking-[0.18em] underline decoration-pink decoration-2 underline-offset-4 hover:text-pink"
           >
-            Read Our Story
+            Read the News
           </Link>
         </Reveal>
 

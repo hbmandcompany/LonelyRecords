@@ -6,8 +6,8 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 
 const LINKS = [
   { href: "/artists", label: "Artists" },
-  { href: "/releases", label: "Releases" },
-  { href: "/about", label: "About" },
+  { href: "/licensing", label: "Licensing" },
+  { href: "/news", label: "News" },
 ];
 
 function InstagramIcon() {
@@ -80,14 +80,12 @@ export default function NavBar() {
           >
             <InstagramIcon />
           </a>
-          <a
-            href="https://open.spotify.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/shop"
             className="sticker sticker-hover hidden rounded-full bg-pink px-4 py-1.5 font-mono text-xs font-medium uppercase tracking-wide text-ghost sm:inline-flex"
           >
-            Listen Now
-          </a>
+            Shop
+          </Link>
           <button
             type="button"
             aria-label="Toggle menu"
@@ -126,14 +124,13 @@ export default function NavBar() {
               {l.label}
             </Link>
           ))}
-          <a
-            href="https://open.spotify.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/shop"
+            onClick={() => setOpen(false)}
             className="rounded-xl bg-pink px-4 py-3 text-center font-mono text-sm uppercase tracking-wide text-ghost"
           >
-            Listen Now
-          </a>
+            Shop
+          </Link>
         </motion.div>
       )}
     </motion.header>

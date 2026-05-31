@@ -3,10 +3,18 @@ import SpeedLines from "@/components/decorative/SpeedLines";
 import Button from "@/components/ui/Button";
 import Badge from "@/components/ui/Badge";
 import Reveal from "@/components/anim/Reveal";
-import { featuredArtist } from "@/lib/data/artists";
+import { featuredRelease } from "@/lib/data/releases";
 
-export default function FeaturedArtist() {
-  const artist = featuredArtist;
+function formatDate(iso: string) {
+  return new Date(iso).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+export default function FeaturedAlbum() {
+  const album = featuredRelease;
 
   return (
     <section className="relative overflow-hidden bg-smoke px-6 py-24 text-paper md:px-12 md:py-32">
@@ -19,8 +27,8 @@ export default function FeaturedArtist() {
             className="relative z-10 aspect-square"
           >
             <img
-              src={artist.image}
-              alt={artist.name}
+              src={album.coverArt}
+              alt={`${album.title} by ${album.artistName}`}
               className="h-full w-full object-cover"
             />
           </BlobFrame>
@@ -28,17 +36,23 @@ export default function FeaturedArtist() {
 
         <Reveal delay={0.1}>
           <Badge rotate={-5} className="mb-6">
-            Featured Artist
+            Featured Album
           </Badge>
-          <h2 className="font-display text-6xl leading-[0.85] tracking-wide text-pink md:text-8xl">
-            {artist.name}
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-pink">
+            {album.artistName} · {formatDate(album.releaseDate)}
+          </p>
+          <h2 className="mt-2 font-display text-6xl leading-[0.85] tracking-wide text-pink md:text-8xl">
+            {album.title}
           </h2>
           <p className="mt-6 max-w-md font-mono text-sm leading-relaxed text-paper/80 md:text-base">
-            {artist.bio}
+            {album.description}
           </p>
-          <div className="mt-8">
-            <Button href={artist.spotifyUrl} variant="pink" external>
-              View Artist
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Button href={album.spotifyUrl} variant="pink" external>
+              Listen Now
+            </Button>
+            <Button href="/catalog" variant="paper">
+              Explore Catalog
             </Button>
           </div>
         </Reveal>

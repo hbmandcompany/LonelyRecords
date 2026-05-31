@@ -16,6 +16,7 @@ type ButtonProps = {
   variant?: Variant;
   className?: string;
   external?: boolean;
+  type?: "button" | "submit" | "reset";
 };
 
 export default function Button({
@@ -24,13 +25,18 @@ export default function Button({
   variant = "pink",
   className = "",
   external = false,
+  type = "button",
 }: ButtonProps) {
   const cls = `sticker sticker-hover inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-mono text-sm font-medium uppercase tracking-wide ${VARIANTS[variant]} hover:-translate-y-0.5 active:translate-y-0 ${className}`;
 
   if (href) {
-    if (external) {
+    if (external || href.startsWith("mailto:")) {
       return (
-        <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>
+        <a
+          href={href}
+          {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+          className={cls}
+        >
           {children}
         </a>
       );
@@ -42,5 +48,9 @@ export default function Button({
     );
   }
 
-  return <button className={cls}>{children}</button>;
+  return (
+    <button type={type} className={cls}>
+      {children}
+    </button>
+  );
 }

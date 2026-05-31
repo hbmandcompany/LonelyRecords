@@ -11,8 +11,11 @@ export const releases: Release[] = [
     type: "album",
     releaseDate: "2025-04-18",
     coverArt: art("moonwater"),
+    description:
+      "Reverb-soaked lullabies recorded on a four-track in a Tokyo basement. Twelve tracks for the walk home at 4am — moonlight on wet pavement, cassette hiss, and hooks that linger.",
     spotifyUrl: "https://open.spotify.com",
     appleMusicUrl: "https://music.apple.com",
+    isFeatured: true,
   },
   {
     id: "after-hours-tv",
@@ -92,3 +95,6 @@ export const releases: Release[] = [
     appleMusicUrl: "https://music.apple.com",
   },
 ];
+
+export const featuredRelease =
+  releases.find((r) => r.isFeatured) ?? releases[0];

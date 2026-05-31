@@ -19,6 +19,8 @@ export interface Release {
   type: ReleaseType;
   releaseDate: string;
   coverArt: string;
+  description?: string;
   spotifyUrl: string;
   appleMusicUrl: string;
+  isFeatured?: boolean;
 }

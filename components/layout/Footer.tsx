@@ -2,16 +2,15 @@ import Link from "next/link";
 import GrainOverlay from "@/components/decorative/GrainOverlay";
 
 const NAV = [
-  { href: "/artists", label: "Artists" },
-  { href: "/releases", label: "Releases" },
-  { href: "/about", label: "About" },
+  { href: "/news", label: "News" },
+  { href: "/licensing", label: "Licensing" },
+  { href: "/careers", label: "Careers" },
 ];
 
 const SOCIAL = [
   { href: "https://open.spotify.com", label: "Spotify" },
   { href: "https://music.apple.com", label: "Apple Music" },
   { href: "https://instagram.com", label: "Instagram" },
-  { href: "https://bandcamp.com", label: "Bandcamp" },
 ];
 
 export default function Footer() {
