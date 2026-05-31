@@ -1,5 +1,6 @@
 import Link from "next/link";
 import GrainOverlay from "@/components/decorative/GrainOverlay";
+import SearchlightsMark from "@/components/decorative/SearchlightsMark";
 
 const NAV = [
   { href: "/news", label: "News" },
@@ -19,14 +20,8 @@ export default function Footer() {
       <GrainOverlay opacity={0.12} />
       <div className="relative z-10 mx-auto max-w-6xl px-6 py-16">
         <div className="grid gap-10 md:grid-cols-3">
-          <div>
-            <p className="font-display text-3xl tracking-[0.1em] text-ghost">
-              LONELY RECORDS
-            </p>
-            <p className="mt-3 max-w-xs font-mono text-sm text-ink/50">
-              An independent label for artists who refuse to compromise. Dark,
-              deliberate, and deeply felt — est. 2025.
-            </p>
+          <div className="flex items-start">
+            <SearchlightsMark />
           </div>
 
           <div>
@@ -69,7 +64,7 @@ export default function Footer() {
         </div>
 
         <p className="mt-14 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-ink/35">
-          &copy; 2025 Lonely Records LLC. All Rights Reserved.
+          &copy; 2026 Hated By Many LLC. All Rights Reserved.
         </p>
       </div>
     </footer>

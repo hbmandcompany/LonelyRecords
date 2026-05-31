@@ -114,6 +114,45 @@
       rgba(0, 0, 0, 0.15) 4px
     );
   }
+
+  .searchlight-beam {
+    pointer-events: none;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background: linear-gradient(
+      to top,
+      rgba(255, 248, 220, 0.38) 0%,
+      rgba(201, 162, 39, 0.14) 35%,
+      transparent 72%
+    );
+    filter: blur(6px);
+    opacity: 0.85;
+  }
+
+  .searchlight-beam-a {
+    animation: searchlight-sweep-a 5s ease-in-out infinite alternate;
+  }
+
+  .searchlight-beam-b {
+    animation: searchlight-sweep-b 5.5s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes searchlight-sweep-a {
+  from {
+    transform: rotate(-28deg);
+  }
+  to {
+    transform: rotate(32deg);
+  }
+}
+
+@keyframes searchlight-sweep-b {
+  from {
+    transform: rotate(28deg);
+  }
+  to {
+    transform: rotate(-32deg);
+  }
 }
 
 @layer utilities {

@@ -84,9 +84,8 @@ export default function ComingSoon() {
           >
             COMING SOON
           </h2>
-          <p className="mx-auto mt-6 max-w-md font-mono text-sm leading-relaxed text-ink/55">
-            Artists, releases, and catalog previews are on the way. Something
-            worth the wait is being prepared.
+          <p className="mx-auto mt-6 max-w-md font-mono text-sm uppercase tracking-[0.25em] text-ink/55">
+            Stay Tuned
           </p>
         </Reveal>
       </div>
